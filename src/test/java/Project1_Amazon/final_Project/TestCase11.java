@@ -35,8 +35,7 @@ public class TestCase11 extends  LaunchnQuit
 		a4.addingtocart();
 		a4.goToCart();		
 		Amazon_Cart_Page a5=new Amazon_Cart_Page(driver);
-		a5.selectQuantity_dd();
-		a5.proceedToBuy();
+		a5.selectQuantity_dd();		a5.proceedToBuy();
 		Amazon_CheckOut_Page a6=new Amazon_CheckOut_Page(driver);
 		a6.selectAddress();
 		a6.useThisAddress();

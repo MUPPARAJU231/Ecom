@@ -27,7 +27,7 @@ public class Amazon_CheckOut_Page
 	{
 		card.click();
 	}
-	@FindBy(xpath = "//a[.='Enter card details']")
+	@FindBy(xpath = "(//a[.='Enter card details'])[1]")
 	WebElement enterCardDetails;
 	public void clickOnEnterCardDetails()
 	{
@@ -45,7 +45,7 @@ public class Amazon_CheckOut_Page
 	WebElement cardNumber;
 	public void enterCardNumber()
 	{
-		cardNumber.sendKeys("5103720438441477");
+		cardNumber.sendKeys("6523000805088478");
 	}
 	@FindBy(xpath = "//input[@name='ppw-accountHolderName']")
 	WebElement nicName;
@@ -59,14 +59,14 @@ public class Amazon_CheckOut_Page
 	public void expiryMonth() 
 	{
 		Select selectDate = new Select(selectExpiryMonth);
-		selectDate.selectByValue("11");
+		selectDate.selectByValue("9");
 	}
 	@FindBy(name = "ppw-expirationDate_year")
 	WebElement selectExpiryYear;
 	public void expiryYear() 
 	{
 		Select selectYear = new Select(selectExpiryYear);
-		selectYear.selectByValue("2035");
+		selectYear.selectByValue("2028");
 	}
 	@FindBy(name = "ppw-widgetEvent:AddCreditCardEvent")
 	WebElement enterButton;
@@ -85,7 +85,7 @@ public class Amazon_CheckOut_Page
 	WebElement cvvNumber;
 	public void enterCvvNumber() 
 	{
-		cvvNumber.sendKeys("143" + Keys.ENTER);
+		cvvNumber.sendKeys("257" + Keys.ENTER);
 	}
 	
 	
@@ -108,7 +108,7 @@ public class Amazon_CheckOut_Page
 	public void selectNetBanking_dd() 
 	{
 		Select s1=new Select(netBankingdd);
-		s1.deselectByValue("State Bank of India");
+		s1.selectByValue("SBI DIRECT");
 	}
 	
 	@FindBy(xpath="(//select[@id='quantity'])[1]")
@@ -136,7 +136,7 @@ public class Amazon_CheckOut_Page
 	{
 		cashONDelevery.click();
 	}
-	@FindBy(xpath="//span[.='Use this payment method']") 
+	@FindBy(xpath="(//input[@class='a-button-input a-button-text'])[3]") 
 	WebElement useThisPaymentMethod;
 	public void useThisPaymentMethod() 
 	{

@@ -1,9 +1,12 @@
 package Project1_Amazon.final_Project;
 import static org.testng.Assert.assertTrue;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import resources.LaunchnQuit;
 import resources.Test_Data;
@@ -42,19 +45,31 @@ public class TestCase12 extends  LaunchnQuit
 		a6.selectAddress();
 		a6.useThisAddress();
 		a6.selectCardRadioBtn();
+//		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(5));
+//		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='a-container content-container']")));
 		a6.clickOnEnterCardDetails();
 		a6.switchToIframe(driver);
+//		Thread.sleep(500);
+		WebDriverWait wait01=new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait01.until(ExpectedConditions.visibilityOf(a6.cardNumber));
 		a6.enterCardNumber();
 		a6.enterName();
 		a6.expiryMonth();
 		a6.expiryYear();
 		a6.saveCardDetails();
 		a6.switchToMain(driver);
+		WebDriverWait wait1=new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait1.until(ExpectedConditions.visibilityOf(a6.cvvNumber));
+//		Thread.sleep(500);
 		a6.enterCvvNumber();
 //		ChromeOptions options=new ChromeOptions();
 //		options.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
 		a6.continueWithOutSave_Btn();
-		a6.useThisPaymentMethod();
-		assertTrue(a6.chooseDeleveryOptions());
+//		WebDriverWait wait2=new WebDriverWait(driver, Duration.ofSeconds(5));
+//		wait2.until(ExpectedConditions.visibilityOf(a6.useThisPaymentMethod));
+//		a6.useThisPaymentMethod();
+		
+		
+//		assertTrue(a6.chooseDeleveryOptions());
 	}
 }

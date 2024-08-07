@@ -23,10 +23,8 @@ public class TestCase07 extends LaunchnQuit
 		Amazon_product_Page a3=new Amazon_product_Page(driver);
 		
 		String actual= a3.price();
-		System.out.println(actual);
 		assertNotEquals(actual, "0");
 		String productDetails=a3.description();
-		System.out.println(productDetails);
 		assertEquals(productDetails.contentEquals(productDetails), true);
 		assertNotEquals(a3.reviews(), null);
 	}

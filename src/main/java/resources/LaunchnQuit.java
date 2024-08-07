@@ -43,7 +43,7 @@ public class LaunchnQuit
 	@AfterMethod
 	public void quit()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 	public void captureScreenShot(String fileName)

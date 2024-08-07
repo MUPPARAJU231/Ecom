@@ -36,7 +36,6 @@ public class TestCase05 extends LaunchnQuit
 		driver.switchTo().window(c_id);
 		
 		String actual= driver.getTitle();
-		System.out.println(actual);
 		assertNotEquals(actual, "Amazon.in : shoe");
 	}
 }

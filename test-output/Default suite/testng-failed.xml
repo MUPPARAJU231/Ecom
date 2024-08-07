@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Project1_Amazon.final_Project.TestCase06">
+      <class name="Project1_Amazon.final_Project.TestCase11">
         <methods>
-          <include name="searchingWithFilters"/>
-          <include name="launch"/>
-          <include name="quit"/>
+          <include name="checkOut"/>
         </methods>
-      </class> <!-- Project1_Amazon.final_Project.TestCase06 -->
+      </class> <!-- Project1_Amazon.final_Project.TestCase11 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

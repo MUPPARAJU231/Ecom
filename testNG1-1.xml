@@ -6,13 +6,8 @@
 	</listeners>
 	<test name="TestOnChrome">
 		<parameter name="browser" value="chrome" />
-		<groups>
-			<run>
-				<include name="smoke" />
-			</run>
-		</groups>
 		<classes>
-			<class name="Project1_Amazon.final_Project.TestCase15" />
+			<class name="Project1_Amazon.final_Project.TestCase11" />
 		</classes>
 	</test>
 </suite> 

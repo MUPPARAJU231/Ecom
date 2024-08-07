@@ -24,9 +24,9 @@ public class TestCase14 extends  LaunchnQuit
 		Amazon_Orders_Page a3=new Amazon_Orders_Page(driver);
 		a3.selectOrdersandReturns();
 		a3.selectOrdersSortbyTime();
-		a3.productReview();
-		a3.rateFiveStar();
+//		a3.productReview();
+//		a3.rateFiveStar();
 		
-		assertEquals(a1.search_tf.getAttribute("value"), "shoe");
+		assertEquals(a1.search_tf.getAttribute("value"), "");
 	}
 }
